@@ -26,7 +26,8 @@ def converter(value):
         return "PNEUMONIA"
 
 def predict(image1): 
-    image = load_img(image1, target_size=(224, 224))
+    image = image1.resize(224, 224)
+ #   image = load_img(image1, target_size=(224, 224))
     # convert the image pixels to a numpy array
     image = img_to_array(image)
     # reshape data for the model
